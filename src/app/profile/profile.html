@@ -4,10 +4,9 @@
         <div class="panel-body">
             <form name="profileForm" ng-submit="profile.update()">
                 <div class="form-group>">
-                    <img alt="profil-pic" ng-hide="!files[0].$error && files[0]" style="border: 1px solid black; width: 256px; height: 128px;"  src="../../assets/images/upload-banner.png">
-                    <img alt="profil-pic" ng-show="!files[0].$error && files[0]" ngf-src="!files[0].$error && files[0]" style="border: 1px solid black; width: 256px; height: 128px;"  src="../../assets/images/upload-banner.png">
-                    <div class="button" ngf-select ng-model="files" ngf-multiple="true">Upload Image</div>
-                    <button type="submit" ng-click="submit()">submit</button>
+                    <img alt="profil-pic" ng-hide="!profile.user.profilePicture[0].$error && profile.user.profilePicture[0]" style="border: 1px solid black; width: 256px; height: 192px;"  src="../../assets/images/upload-banner.png">
+                    <img alt="profil-pic" ng-show="!profile.user.profilePicture[0].$error && profile.user.profilePicture[0]" ngf-src="!profile.user.profilePicture[0].$error && profile.user.profilePicture[0]" style="border: 1px solid black; width: 256px; height: 192px;">
+                    <div class="button" ngf-select ng-model="profile.user.profilePicture" ngf-multiple="true">Upload Image</div>
                 </div>
                 <div class="form-group>">
                     <label>Name</label>

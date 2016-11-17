@@ -4,7 +4,7 @@ module.exports = {
     getProfile: function(req, res){
         var query = {_id: new objectId(req.user)};
         //Use Select to send specific data
-        User.findOne(query).select('name bio').exec(function (err, result) {
+        User.findOne(query).select('name bio profilePicture').exec(function (err, result) {
         res.send(result);
         });
     },
