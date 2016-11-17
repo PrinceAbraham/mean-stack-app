@@ -1,18 +1,22 @@
 <div class="container">
     <div class="panel panel-default">
-            <div class="panel-heading">Profile</div>
-            <div class="panel-body">
-                <form name="profileForm" ng-submit="profile.update()">
-                    <div class="form-group>">
-                        <label>Name</label>
-                        <input name="name" type="text" class="form-control" ng-model="profile.user.name">
-                    </div>
-                    <div class="form-group">
-                        <label>Bio</label>
-                        <input name="bio" type="text" class="form-control" ng-model="profile.user.bio">
-                    </div>
-                    <button type="submit" class="btn btn-default" ng-disabled="!profileForm.$dirty || !profile.user.name">Update</button>
-                </form>
-            </div>
+        <div class="panel-heading">Profile</div>
+        <div class="panel-body">
+            <form name="profileForm" ng-submit="profile.update()">
+                <div class="form-group>">
+                    <img alt="profil-pic" ng-hide="!files[0].$error && files[0]" style="border: 1px solid black; width: 256px; height: 128px;"  src="../../assets/images/upload-banner.png">
+                    <img alt="profil-pic" ng-show="!files[0].$error && files[0]" ngf-src="!files[0].$error && files[0]" style="border: 1px solid black; width: 256px; height: 128px;"  src="../../assets/images/upload-banner.png">
+                    <div class="button" ngf-select ng-model="files" ngf-multiple="true">Upload Image</div>
+                    <button type="submit" ng-click="submit()">submit</button>
+                </div>
+                <div class="form-group>">
+                    <label>Name</label>
+                    <input name="name" type="text" class="form-control" ng-model="profile.user.name"> </div>
+                <div class="form-group">
+                    <label>Bio</label>
+                    <input name="bio" type="text" class="form-control" ng-model="profile.user.bio"> </div>
+                <button type="submit" class="btn btn-default" ng-disabled="!profileForm.$dirty || !profile.user.name">Update</button>
+            </form>
         </div>
+    </div>
 </div>

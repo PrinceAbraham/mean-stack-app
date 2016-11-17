@@ -12,8 +12,9 @@ import { GithubContributorService } from '../app/components/githubContributor/gi
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
+import {ngFileUpload} from './directives/ng-file-upload';
 
-angular.module('meanApp', ['ui.router', 'ui.bootstrap', 'toastr', 'satellizer'])
+angular.module('meanApp', ['ui.router', 'ui.bootstrap', 'toastr', 'satellizer', 'ngFileUpload'])
 .constant('API_URL','http://localhost:5000/')
   .constant('malarkey', malarkey)
   .constant('moment', moment)
