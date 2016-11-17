@@ -6,6 +6,7 @@ import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
 import { AuthController } from './auth/auth.controller';
 import { NavbarController } from './components/navbar/navbar.controller';
+import { ProfileController } from './profile/profile.controller';
 import { CompareToDirective } from './directives/compareTo.directive';
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
@@ -24,6 +25,7 @@ angular.module('meanApp', ['ui.router', 'ui.bootstrap', 'toastr', 'satellizer'])
   .controller('MainController', MainController)
   .controller('AuthController', AuthController)
   .controller('NavbarController', NavbarController)
+  .controller('ProfileController', ProfileController)
   .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective)
   .directive('compareTo', CompareToDirective);
